@@ -92,6 +92,7 @@ System.out.println(f4==f5); // true
 
 ### 字符型 char 
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/40430862/1698654550666-83f4182b-621c-47d6-a28e-8c2a793fb456.png#averageHue=%23faf8f8&clientId=u91c1dfc5-bc9b-4&from=paste&height=257&id=uc96e92f2&originHeight=609&originWidth=1071&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=213421&status=done&style=none&taskId=u7043d9b3-1873-445e-85f2-851465f917c&title=&width=452.085205078125)![image.png](https://cdn.nlark.com/yuque/0/2023/png/40430862/1698654583242-dd56c59d-86d1-4f37-ae57-b09e3fa5377a.png#averageHue=%23cedee8&clientId=u91c1dfc5-bc9b-4&from=paste&height=286&id=u91f4bd55&originHeight=718&originWidth=606&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=801558&status=done&style=none&taskId=u2b881713-8257-4eaf-96df-2c39377507a&title=&width=241.2518768310547)
+
 Java中字符采用Unicode编码，支持65536个字符的表示。
 
 Java中字符串不是基本数据类型。
@@ -129,6 +130,7 @@ int c = a+b;
 System.out.println(c);
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/40430862/1698669315120-0f765861-f40e-45df-9726-ff804d2cc24e.png#averageHue=%23191919&clientId=u91c1dfc5-bc9b-4&from=paste&height=96&id=u041b10d6&originHeight=159&originWidth=801&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=17355&status=done&style=none&taskId=ua4703c30-2056-4792-bb8d-14137373e23&title=&width=485.45451739603)
+
 没有long时，结果为int。即使操作数全为short，byte，结果也是int。
 
 两个整数相除，直接保留整数部分，没有四舍五入。
@@ -204,6 +206,7 @@ System.out.println(s1||s2&&s3); // true 先执行s2&&s3,再执行s1||true
 1. 容量小的数据类型可以**自动转换**为容量大的数据类型。这个过程可能会造成精度的损失。
 
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/40430862/1698910196601-af0c3b0b-c0bd-4c7d-b813-73cca39a557f.png#averageHue=%23f7f5f5&clientId=uad6b452f-2d10-4&from=paste&height=196&id=u22361633&originHeight=323&originWidth=650&originalType=binary&ratio=1.6500000953674316&rotation=0&showTitle=false&size=100113&status=done&style=none&taskId=u7726de30-88de-4ffd-85b8-c340009da04&title=&width=393.93937117031146)
+
 **特例**：整型常量是int类型，但是可以自动转换成：byte/short/char。
 
 只要不超过该类型表示的范围。
@@ -237,7 +240,8 @@ System.out.println(e); // 44
 ```
 
 3. 基本类型转化时常见的错误和问题。
-   - 操作比较大的数时，要留意是否溢出，尤其是操作整数时。
+
+   操作比较大的数时，要留意是否溢出，尤其是操作整数时。
 ```java
 int money = 1000000000; // 10亿
 int years = 20;
@@ -260,13 +264,13 @@ System.out.println(total2); // 20000000000
 
 2. 循环结构
 
-当型：while、for
+​		当型：while、for
 
-直到型：do-while
+​		直到型：do-while
 
-嵌套循环、break、continue
+​		嵌套循环、break、continue
 
-**Tips: **带标签的continue，很特殊的一种"label:/goto"的用法。**帮助我们从内部循环跳到外部循环。**
+​		**Tips: **带标签的continue，很特殊的一种"label:/goto"的用法。**帮助我们从内部循环跳到外部循环。**		
 
 ```java
 outer:for (int i = 101; i < 150; i++){
