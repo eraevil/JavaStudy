@@ -369,4 +369,66 @@ public class Test {
 ```
 <a name="fI8Kn"></a>
 ### 多态 polymorphism
+同一个方法调用，不同对象行为完全不同。<br />要点：<br />（1）多态是方法的多态，不是属性的多态（多态与属性无关）。<br />（2）多态的存在有三个必要条件：继承，方法重写，父类引用指向子类对象。<br />（3）父类引用指向子类对象，用该父类引用调用子类重写方法，则达成多态。
+```java
+// ==========com.nuobu.polymorphism.Animal==========
+package com.nuobu.polymorphism;
 
+public class Animal {
+    public void shout(){
+        System.out.println("叫了一声");
+    }
+}
+
+
+class Dog extends Animal{
+    public void shout(){
+        System.out.println("汪汪汪");
+    }
+    public void seeDoor(){
+        System.out.println("看门中");
+    }
+}
+
+class Cat extends Animal{
+    public void shout(){
+        System.out.println("喵喵喵");
+    }
+    public void catchMouse(){
+        System.out.println("抓老鼠中");
+    }
+}
+
+// ==========com.nuobu.polymorphism.TestPolym==========
+package com.nuobu.polymorphism;
+// 测试多态
+public class TestPolym {
+    public static void main(String[] args) {
+        animalCry(new Dog());
+        animalCry(new Cat());
+    }
+
+    static void animalCry(Animal a){
+        a.shout();
+    }
+}
+```
+运行结果：<br />汪汪汪<br />喵喵喵
+<a name="EUAx6"></a>
+#### 对象的转型
+（1）父类引用指向子类对象，我们称这个过程为**向上转型**，属于自动类型转换。<br />（2）向上转型后的父类引用变量只能调用它编译类型的方法，不能调用它运行时类型的方法。这时我们需要进行类型的强制转换，即**向下转型**。
+```java
+Animal animal = new Dog(); // 向上转型
+// animal.seeDoor(); // 无法执行
+
+Dog d = (Dog)animal; // 向下转型
+d.seeDoor(); // 可以调用
+
+Cat c = (Cat)animal; // 向下转型，编译不会报错，但运行会报异常
+c.catchMouse(); // 不可调用
+
+if (animal instanceof Cat){
+	Cat c = (Cat)animal;
+    c.catchMouse();
+}
+```
