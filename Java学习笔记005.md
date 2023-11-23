@@ -2,7 +2,7 @@
 ## 数组
 <a name="elLv7"></a>
 ### 基本概念
-数组是相同类型数据的有序结合。其中，每一个数据称为一个元素，每个元素通过索引访问。有以下基本特点：
+数组是相同类型数据的有序集合。其中，每一个数据称为一个元素，每个元素通过索引访问。有以下基本特点：
 
 - 长度是确定的。数组一旦被创建，它的大小就是不可改变的。
 - 其元素类型必须相同，不能出现混合类型。
@@ -307,7 +307,7 @@ public class TestBubbleSort {
 运行结果：<br />原始顺序：[3, 1, 6, 8, 9, 0, 7, 4, 5, 2]<br />1趟顺序：[1, 3, 6, 8, 0, 7, 4, 5, 2, 9]<br />2趟顺序：[1, 3, 6, 0, 7, 4, 5, 2, 8, 9]<br />3趟顺序：[1, 3, 0, 6, 4, 5, 2, 7, 8, 9]<br />4趟顺序：[1, 0, 3, 4, 5, 2, 6, 7, 8, 9]<br />5趟顺序：[0, 1, 3, 4, 2, 5, 6, 7, 8, 9]<br />6趟顺序：[0, 1, 3, 2, 4, 5, 6, 7, 8, 9]<br />7趟顺序：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br />8趟顺序：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br />冒泡后顺序：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 <a name="IUjHS"></a>
 ### 二分查找法
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/40430862/1700557298955-7eb35f49-675f-4620-a978-ec215aa6f386.png#averageHue=%23fdfcfb&clientId=uc13ecd2a-fc5d-4&from=paste&height=298&id=u211962a2&originHeight=790&originWidth=968&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=331553&status=done&style=none&taskId=u6e9ccea5-cd3c-46e8-92c2-4b2ada94ef2&title=&width=365.4000244140625)<br />二分查找对有序序列进行查找。找到返回索引下表，否则返回-1。
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/40430862/1700557298955-7eb35f49-675f-4620-a978-ec215aa6f386.png#averageHue=%23fdfcfb&clientId=uc13ecd2a-fc5d-4&from=paste&height=298&id=u211962a2&originHeight=790&originWidth=968&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=331553&status=done&style=none&taskId=u6e9ccea5-cd3c-46e8-92c2-4b2ada94ef2&title=&width=365.4000244140625)<br />二分查找对有序序列进行查找。找到返回索引下标，否则返回-1。
 ```java
 package com.nuobu;
 
